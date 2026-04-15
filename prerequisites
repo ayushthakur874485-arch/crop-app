@@ -8,8 +8,10 @@ scikit-learn
 joblib
 
 # Web Application Framework 
+streamlit
 
-# streamlit
+#web app for model
+https://crop-app-hjgweaytmvcaetafd3bwy9.streamlit.app/
 
 #import pickle use
 #model.pkl use
