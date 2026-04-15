@@ -1,3 +1,13 @@
-streamlit
-scikit-learn
+# Data Manipulation and Numerical Computing
 numpy
+pandas
+random forest ML algorithm
+
+# Machine Learning and Modeling
+scikit-learn
+joblib
+
+# Web Application Frameworks
+# streamlit  # Use this instead if you are building a Streamlit dashboard
+
+
