@@ -11,4 +11,5 @@ joblib
 
 # streamlit
 
-
+#import pickle use
+#model.pkl use
