@@ -1,44 +1,123 @@
-# Crop Prediction using Machine Learning
+# 🌾 Crop Prediction using Machine Learning
 
-![crops](crops.jpeg)
+A machine learning web application that helps farmers make informed decisions about crop selection based on soil and weather conditions.
 
-## Overview
+---
 
-This project aims to develop a machine learning based crop-prediction model to support farmers in making informed decisions about crop selection, planting, and harvesting. The model was trained on a large dataset of historical crop and weather data, using deep learning techniques. The results of the model showed high accuracy in predicting crop yield, surpassing the performance of traditional crop prediction methods. The model has been deployed with user-friendly interface, thus enabling farmers to input a few values and obtain informed decisions about when and what to plant. This project represents a significant step forward in using ML to improve the efficiency and profitability of agriculture.
+## 📌 Overview
 
-## Data
+This project uses a trained machine learning model to predict the most suitable crop to grow based on environmental and soil parameters. Farmers can input a few key values and instantly receive a recommendation, reducing guesswork and improving agricultural efficiency.
 
-The data used to train the model was collected from the [Crop Prediction](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset) dataset. The dataset consists of 2200 samples of 22 different crops whose predictions are made using 7 features: nitrogen, phosphorus, potassium, and pH content of the soil, temperature, humidity and rainfall. The dataset is perfectly balanced, with each crop having 100 samples. The [Rainfall in India](https://www.kaggle.com/datasets/rajanand/rainfall-in-india) datset is used to cross reference geolocations to corresponding rainfall values. The data was pre-processed to ensure consistency and cleaned to remove any missing values. The data includes information on various crop types, weather patterns, and soil types. The following data visualization was performed on the [Crop Prediction](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset) dataset:
+---
 
-- Pairwise correlation plots for the features
+## 🚀 Features
 
-![data_visual1](data_visual1.png)
+- Predicts the best crop based on soil nutrients and weather data
+- Simple and intuitive web interface built with Streamlit
+- Trained on a balanced dataset of 2200 samples across 22 crop types
+- High accuracy, outperforming traditional crop prediction methods
 
-- Correlation Matrix
+---
 
-![correlation_matrix](correlation_matrix.png)
+## 🗂️ Project Structure
 
-## Model
+```
+crop-app/
+├── app.py               # Streamlit web application
+├── model code.txt       # Model training code
+├── model.pkl            # Trained ML model (pickle file)
+├── prerequisites        # Prerequisites and setup notes
+├── requirements.txt     # Python dependencies
+└── README.md
+```
 
-The model is built using Deep Neural Networks(DNNs). The architecture we have chosen consists of 3 hidden layers with 64, 128 and 64 neurons respectively, and an output layer of 22 neurons, each corresponding to one type of crop. The activation function in the input and hidden layers is [SeLU](https://pytorch.org/docs/stable/generated/torch.nn.SELU.html), while the activation function for the output layer is softmax. The model was created using PyTorch framework.
+---
 
-## Training
+## 📊 Dataset
 
-The model was trained on the data with a 80:20 train-test split ratio. The objective(loss) function used was categorical crossentropy, and the optimizer used was ADAM. The performance metric used to evaluate the model is accuracy. Training was done for 100 epochs.
+The model was trained on the [Crop Prediction Dataset](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset), which consists of:
 
-## Results
+- **2200 samples** across **22 different crops**
+- **7 input features:**
+  - Nitrogen (N)
+  - Phosphorus (P)
+  - Potassium (K)
+  - pH value of the soil
+  - Temperature (°C)
+  - Humidity (%)
+  - Rainfall (mm)
 
-The model achieved an accuracy of 99% on the train data, and an accuracy of about 99% on the test data, indicating a high level of accuracy in its predictions.
+The dataset is perfectly balanced with 100 samples per crop.
 
-<!-- The vizualization of the performance is shown as follows: -->
+---
 
-## Testing
+## 🧠 Model
 
-The following data is collected from the end-user to make predictions:
+The model was trained using machine learning classification techniques. The trained model is saved as `model.pkl` and loaded directly in the app for real-time predictions.
 
-1. N, P, K, pH content of the soil.
-2. Geolocation (State and District)
-3. Month(Season) of cultivation
+---
 
+## ⚙️ Installation & Setup
 
+### 1. Clone the repository
 
+```bash
+git clone https://github.com/ayushthakur874485-arch/crop-app.git
+cd crop-app
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the app
+
+```bash
+streamlit run app.py
+```
+
+The app will open in your browser at `http://localhost:8501`.
+
+---
+
+## 🖥️ Usage
+
+1. Open the app in your browser
+2. Enter the soil and weather values:
+   - Nitrogen, Phosphorus, Potassium levels
+   - Soil pH, Temperature, Humidity, Rainfall
+3. Click **Predict**
+4. The app will display the recommended crop
+
+---
+
+## 📦 Requirements
+
+See `requirements.txt` for the full list. Key dependencies include:
+
+- Python 3.x
+- scikit-learn
+- pandas
+- numpy
+- streamlit
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**ayushthakur874485-arch**  
+GitHub: [@ayushthakur874485-arch](https://github.com/ayushthakur874485-arch)
